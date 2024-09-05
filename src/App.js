@@ -15,7 +15,7 @@ function App() {
     if (registro.trim() === '') return;
 
     try {
-      const response = await fetch('http://24.144.66.64:8080/api/nuevo_mensaje', {
+      const response = await fetch('http://24.144.66.63:8080/api/nuevo_mensaje', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ function App() {
 
   const obtenerMensajes = async () => {
     try {
-      const response = await fetch('http://24.144.66.64:8080/api/mensajes');
+      const response = await fetch('http://24.144.66.63:8080/api/mensajes');
 
       if (response.ok) {
         const data = await response.json();
